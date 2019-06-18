@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4f5b62"
+    tools:context="io.github.controlwear.joystickdemo.MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView_angle_left"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="116dp"
+        android:layout_toStartOf="@+id/textView_angle_right"
+        android:text="0°"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/textView_strength_left"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView_angle_left"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="116dp"
+        android:layout_toStartOf="@+id/textView_strength_right"
+        android:text="0%"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/textView_angle_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:text="0°"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/textView_strength_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView_angle_right"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:text="0%"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/textView_coordinate_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_strength_right"
+        android:layout_alignParentRight="true"
+        android:text="x050:x050"
+        android:textColor="#ffffff" />
+
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_right"
+        android:layout_width="315dp"
+        android:layout_height="290dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="14dp"
+        custom:JV_backgroundColor="#263238"
+        custom:JV_borderColor="#000a12"
+        custom:JV_borderWidth="9dp"
+        custom:JV_buttonColor="#dd2c00" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickView_left"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginRight="390dp"
+        android:layout_marginBottom="7dp"
+        custom:JV_backgroundColor="#263238"
+        custom:JV_borderColor="#000a12"
+        custom:JV_borderWidth="9dp"
+        custom:JV_buttonColor="#dd2c00" />
+
+    <Button
+        android:id="@+id/hover_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="306dp"
+        android:text="Hover" />
+
+    <Button
+        android:id="@+id/takeoff_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:text="Takeoff" />
+
+    <ImageView
+        android:id="@+id/hover_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="390dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="256dp"
+        android:src="@drawable/status_ball" />
+
+    <TextView
+        android:id="@+id/lang-text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="22dp"
+        android:layout_toStartOf="@+id/textView_angle_left"
+        android:text="LAng"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/lstr-text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lang-text"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="23dp"
+        android:layout_toStartOf="@+id/textView_angle_left"
+        android:text="LStr"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/Rangle-text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="21dp"
+        android:layout_toStartOf="@+id/textView_strength_right"
+        android:text="RAng"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/rstr-text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Rangle-text"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/textView_strength_right"
+        android:text="RStr"
+        android:textColor="#ffffff" />
+
+    <ImageView
+        android:id="@+id/connection_status"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/connection_estab"
+        android:visibility="visible" />
+
+</RelativeLayout>
